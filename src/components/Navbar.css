@@ -1,0 +1,116 @@
+/* Navbar için özel stiller */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.1); /* Daha çok saydamlık */
+  backdrop-filter: blur(20px); /* Blur efekti artırıldı */
+  border-bottom: 1px solid #ddd;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #343a40;
+  text-decoration: none;
+}
+
+.navbar-brand:hover {
+  color: #007bff;
+}
+
+/* Varsayılan olarak menü görünür, hamburger gizli */
+.menu {
+  display: flex; /* Varsayılan olarak flex (büyük ekranlar) */
+  flex-direction: row;
+  align-items: center;
+  background-color: transparent;
+  position: static;
+  border: none;
+  padding: 0; /* Üst padding'i kaldır */
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li {
+  margin: 0; /* Kenar boşluklarını sıfırla */
+}
+
+.menu a {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #000; /* Daha belirgin link rengi */
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #007bff;
+}
+
+.menu-toggle {
+  display: none; /* Varsayılan olarak gizli */
+  background: none;
+  border: none;
+  font-size: 2rem; /* Boyut önceki media query'den alındı */
+  cursor: pointer;
+  color: #343a40;
+  padding: 10px; /* Dolgu önceki media query'den alındı */
+}
+
+/* Mobil Görünüm (768px ve altı) */
+@media (max-width: 768px) {
+  .menu {
+    display: none; /* Mobil görünümde menüyü gizle */
+    flex-direction: column;
+    align-items: center; /* Menüyü ortala */
+    background-color: rgba(255, 255, 255, 0.8); /* Daha az saydam arka plan */
+    backdrop-filter: blur(30px); /* Bulanıklık efekti daha da artırıldı */
+    position: absolute;
+    top: 70px; /* Navbar yüksekliği kadar aşağıda */
+    left: 0;
+    right: 0;
+    border-top: 1px solid #ddd;
+    padding: 20px 0; /* Menüye dikey dolgu ekle */
+    z-index: 999;
+  }
+
+  .menu.open {
+    display: flex; /* Açık menüyü göster */
+  }
+
+  .menu ul {
+    flex-direction: column; /* Menü öğelerini alt alta sırala */
+    align-items: center; /* Menü öğelerini ortala */
+    gap: 15px; /* Menü öğeleri arasındaki boşluğu artır */
+    width: 100%; /* Tam genişlik kapla */
+  }
+
+  .menu li {
+    width: 100%; /* Tam genişlik kapla */
+    text-align: center; /* Metni ortala */
+  }
+
+  .menu a {
+    padding: 15px 20px; /* Mobil için daha büyük tıklama alanı */
+  }
+
+  .menu-toggle {
+    display: block; /* Mobil görünümde hamburger ikonunu göster */
+  }
+}

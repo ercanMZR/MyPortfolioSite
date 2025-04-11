@@ -1,0 +1,55 @@
+/* Bu dosya, Tailwind CSS ile kolayca yapılamayan 
+   veya özel animasyonlar/stiller gerektiren durumlar için kullanılabilir. 
+   Şu anki yapı için çoğu stil Tailwind sınıfları ile yönetilmektedir. */
+
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+  border-radius: 8px;
+}
+
+.project-card .card-body {
+  text-align: center;
+}
+
+.project-card .btn {
+  margin-top: 10px;
+}
+
+/* Örnek: İleride özel bir modal animasyonu eklemek isterseniz burayı kullanabilirsiniz */
+/*
+.modal-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.modal-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms, transform 300ms;
+}
+.modal-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+.modal-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+*/

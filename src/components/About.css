@@ -1,0 +1,88 @@
+/* About Section Styling */
+#about {
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+  padding: 3rem 1rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#about .container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+#about img {
+  max-width: 250px;
+  height: auto;
+  border: 5px solid #dee2e6;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+#about img:hover {
+  transform: scale(1.05);
+}
+
+#about h2 {
+  font-family: "Montserrat", sans-serif; /* Daha modern bir başlık fontu */
+  font-size: 2.5rem;
+  color: #343a40;
+  margin-bottom: 1rem;
+}
+
+#about p {
+  font-family: "Lato", sans-serif; /* Okunabilir ve şık bir paragraf fontu */
+  font-size: 1.1rem;
+  color: #495057;
+  line-height: 1.6;
+}
+
+#about .badge {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  margin: 0.2rem;
+}
+
+@media (max-width: 992px) { /* Orta boy ekranlar için */
+  #about .row {
+    flex-direction: column; /* Öğeleri dikey hizala */
+    text-align: center; /* Metni ortala */
+  }
+  #about .col-lg-6 {
+    width: 100%; /* Tam genişlik kullan */
+    margin-bottom: 2rem; /* Alt boşluk ekle */
+  }
+  #about img {
+     margin-bottom: 1.5rem; /* Resim altına boşluk */
+  }
+}
+
+
+@media (max-width: 768px) { /* Küçük ekranlar için */
+  #about {
+    padding: 2rem 1rem; /* Padding'i azalt */
+    height: auto; /* Yüksekliği otomatik yap */
+  }
+  #about img {
+    max-width: 200px; /* Resim boyutunu küçült */
+    margin-left: auto; /* Resmi ortala (flex ile zaten ortalı ama ek güvence) */
+    margin-right: auto; /* Resmi ortala */
+  }
+
+  #about h2 {
+    font-size: 2rem; /* Başlık boyutunu küçült */
+  }
+
+  #about p {
+    font-size: 1rem; /* Paragraf boyutunu küçült */
+  }
+
+  #about .badge {
+    font-size: 0.8rem; /* Badge boyutunu küçült */
+    padding: 0.4rem 0.8rem; /* Badge padding'ini ayarla */
+  }
+}
