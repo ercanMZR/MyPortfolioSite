@@ -32,7 +32,7 @@ const Contact = () => {
               <i className="fas fa-phone fa-2x text-primary"></i>
             </a>
             <h5 className="mt-3">Telefon</h5>
-            <p>+90 555 123 4567</p>
+            <p>+90 544 322 08 20</p>
           </div>
           <div className="col-md-4">
             <i className="fas fa-map-marker-alt fa-2x text-primary"></i>
